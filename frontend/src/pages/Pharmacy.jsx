@@ -76,47 +76,45 @@ function Pharmacy() {
   // =========================
   // ADD / UPDATE
   // =========================
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setMessage("");
+  
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setMessage("");
 
-    try {
-      if (editingId) {
-        await API.put(
-          `pharmacy/medicines/${editingId}/`,
-          formData
-        );
+  try {
+    const payload = {
+      ...formData,
+      category: formData.category.trim(),
+      quantity: Number(formData.quantity),
+      price: Number(formData.price).toFixed(2),
+    };
 
-        setMessage("Medicine updated successfully!");
-      } else {
-        await API.post(
-          "pharmacy/medicines/",
-          formData
-        );
-
-        setMessage("Medicine added successfully!");
-      }
-
-      resetForm();
-      fetchMedicines();
-
-      setTimeout(() => {
-        setMessage("");
-      }, 3000);
-    } catch (error) {
-      console.error("Medicine error:", error);
-      console.error(
-        "Backend response:",
-        error.response?.data
+    if (editingId) {
+      await API.put(
+        `pharmacy/medicines/${editingId}/`,
+        payload
       );
-
-      if (editingId) {
-        setMessage("Failed to update medicine.");
-      } else {
-        setMessage("Failed to add medicine.");
-      }
+      setMessage("Medicine updated successfully!");
+    } else {
+      await API.post("pharmacy/medicines/", payload);
+      setMessage("Medicine added successfully!");
     }
-  };
+
+    resetForm();
+    await fetchMedicines();
+
+  } catch (error) {
+    console.error("Medicine save error:", error.response?.data || error);
+
+    const errors = error.response?.data;
+
+    setMessage(
+      errors
+        ? JSON.stringify(errors)
+        : "Failed to save medicine. Please try again."
+    );
+  }
+};
 
   // =========================
   // EDIT
