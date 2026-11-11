@@ -310,21 +310,10 @@ function Pharmacy() {
                     Select Category
                   </option>
 
-                  <option value="Tablet">
-                    Tablet
-                  </option>
-
-                  <option value="Syrup">
-                    Syrup
-                  </option>
-
-                  <option value="Injection">
-                    Injection
-                  </option>
-
-                  <option value="Capsule">
-                    Capsule
-                  </option>
+                   <option value="Tablet">Tablet</option>
+<option value="Syrup">Syrup</option>
+<option value="Injection">Injection</option>
+<option value="Capsule">Capsule</option>
                 </select>
               </div>
 
