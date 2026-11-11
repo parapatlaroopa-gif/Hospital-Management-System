@@ -1,0 +1,696 @@
+/* ==========================================================================
+   CAREPULSE AI HOSPITAL - LIGHT SMOKE & LIGHT BLUE MIXED THEME (LOGIN)
+   Airy Frosted Glass • Soft Smoke Mist & Crystal Light Blue Gradients • Animated
+   ========================================================================== */
+
+/* Fullscreen Light Smoke & Light Blue Canvas */
+.login-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  box-sizing: border-box;
+  background: #f1f5f9;
+  background-image: 
+    radial-gradient(at 0% 0%, #e0f2fe 0px, transparent 55%),
+    radial-gradient(at 100% 0%, #bae6fd 0px, transparent 50%),
+    radial-gradient(at 50% 100%, #e2e8f0 0px, transparent 60%),
+    linear-gradient(180deg, #f8fafc 0%, #edf2f7 50%, #e2e8f0 100%);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1e293b;
+}
+
+/* Navigation Arrow Button to Home */
+.back-to-home-link {
+  position: absolute;
+  top: 24px;
+  left: 28px;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px 8px 10px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(186, 230, 253, 0.85);
+  border-radius: 9999px;
+  color: #0369a1;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(148, 163, 184, 0.12);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.back-to-home-link:hover {
+  background: #ffffff;
+  color: #0284c7;
+  border-color: #38bdf8;
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.25);
+  transform: translateX(-3px);
+}
+
+.back-to-home-link .back-arrow-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+  color: #0284c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 900;
+  transition: transform 0.2s ease, background 0.2s ease;
+  box-shadow: 0 2px 6px rgba(56, 189, 248, 0.2);
+}
+
+.back-to-home-link:hover .back-arrow-icon {
+  transform: translateX(-3px);
+  background: linear-gradient(135deg, #bae6fd 0%, #7dd3fc 100%);
+  color: #0369a1;
+}
+
+/* Subtle Animated Light Smoke Grid */
+.login-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(2, 132, 199, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(2, 132, 199, 0.04) 1px, transparent 1px);
+  background-size: 44px 44px;
+  pointer-events: none;
+  animation: gridFloat 22s linear infinite;
+}
+
+@keyframes gridFloat {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(44px); }
+}
+
+/* Ambient Radial Soft Light Blue Smoke Orb */
+.login-ambient-orb {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(186, 230, 253, 0.5) 0%, rgba(224, 242, 254, 0.25) 50%, transparent 70%);
+  filter: blur(50px);
+  pointer-events: none;
+  animation: orbDrift 16s ease-in-out infinite alternate;
+}
+
+@keyframes orbDrift {
+  0% { transform: translate(-80px, -60px) scale(0.95); }
+  100% { transform: translate(90px, 70px) scale(1.1); }
+}
+
+/* Master Login Shell */
+.login-shell {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1120px;
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 36px;
+  align-items: stretch;
+  animation: fadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   LEFT HERO INFRASTRUCTURE PANEL (LIGHT SMOKE & LIGHT BLUE GLASS)
+   ========================================================================== */
+.login-hero-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1.5px solid rgba(186, 230, 253, 0.7);
+  border-radius: 28px;
+  padding: 44px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 15px 35px rgba(148, 163, 184, 0.12), 0 1px 3px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+.login-hero-panel::after {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(186, 230, 253, 0.4) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Brand Capsule */
+.hero-brand-capsule {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.brand-hologram-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #e0f2fe 0%, #38bdf8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  box-shadow: 0 6px 18px rgba(56, 189, 248, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.7);
+  animation: pulseLogo 3s infinite ease-in-out;
+}
+
+@keyframes pulseLogo {
+  0%, 100% { transform: scale(1); box-shadow: 0 6px 16px rgba(56, 189, 248, 0.25); }
+  50% { transform: scale(1.05); box-shadow: 0 8px 24px rgba(56, 189, 248, 0.45); }
+}
+
+.brand-text-block h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+  line-height: 1.1;
+}
+
+.brand-text-block span {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #0284c7;
+}
+
+/* Hero Presentation Copy */
+.hero-intro-title {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: #0f172a;
+  margin-bottom: 14px;
+}
+
+.hero-intro-title span {
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-intro-desc {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #475569;
+  margin-bottom: 30px;
+}
+
+/* Light Smoke & Light Blue Cardiogram Monitor Card */
+.ecg-monitor-card {
+  background: rgba(248, 250, 252, 0.95);
+  border: 1.5px solid rgba(186, 230, 253, 0.8);
+  border-radius: 18px;
+  padding: 18px 20px;
+  margin-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(148, 163, 184, 0.08);
+}
+
+.ecg-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.ecg-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #0284c7;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.ecg-live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #0284c7;
+  box-shadow: 0 0 10px rgba(2, 132, 199, 0.6);
+  animation: pulseGlow 1.8s infinite;
+}
+
+.ecg-wave-svg {
+  width: 100%;
+  height: 48px;
+  overflow: visible;
+}
+
+.ecg-path {
+  fill: none;
+  stroke: #0284c7;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: ecgSweep 2.5s linear infinite;
+  filter: drop-shadow(0 1px 4px rgba(2, 132, 199, 0.4));
+}
+
+@keyframes ecgSweep {
+  0% { stroke-dashoffset: 400; }
+  50% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -400; }
+}
+
+/* Trust Badges Footer */
+.hero-footer-badges {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-top: 18px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.trust-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  font-size: 11.5px;
+  color: #334155;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   RIGHT INTERACTIVE LOGIN CARD (LIGHT SMOKE & LIGHT BLUE)
+   ========================================================================== */
+.login-auth-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1.5px solid rgba(186, 230, 253, 0.8);
+  border-radius: 28px;
+  padding: 40px 38px;
+  box-shadow: 0 20px 45px rgba(148, 163, 184, 0.15), 0 1px 4px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Subtle Top Accent Ribbon */
+.login-auth-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #bae6fd, #38bdf8, #0284c7, #bae6fd);
+  background-size: 300% 100%;
+  animation: shimmerBorder 6s linear infinite;
+}
+
+@keyframes shimmerBorder {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 300% 0%; }
+}
+
+.auth-header {
+  margin-bottom: 24px;
+}
+
+.auth-portal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: #e0f2fe;
+  border: 1px solid #7dd3fc;
+  border-radius: 9999px;
+  color: #0369a1;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.auth-header h2 {
+  margin: 0 0 6px;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+}
+
+.auth-header p {
+  margin: 0;
+  font-size: 13.5px;
+  color: #64748b;
+}
+
+/* ==========================================================================
+   ROLE SELECTION GRID (LIGHT SMOKE & LIGHT BLUE PILLS)
+   ========================================================================== */
+.role-selection-wrapper {
+  margin-bottom: 24px;
+}
+
+.role-selection-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #0284c7;
+  margin-bottom: 10px;
+}
+
+.role-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.role-select-card {
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 12px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #64748b;
+}
+
+.role-select-card:hover {
+  background: #f0f9ff;
+  border-color: #7dd3fc;
+  transform: translateY(-2px);
+  color: #0284c7;
+}
+
+.role-select-card.active {
+  background: linear-gradient(180deg, #e0f2fe 0%, #f0f9ff 100%);
+  border-color: #38bdf8;
+  box-shadow: 0 4px 16px rgba(56, 189, 248, 0.25);
+  color: #0369a1;
+  transform: translateY(-2px);
+}
+
+.role-icon {
+  font-size: 22px;
+  transition: transform 0.25s ease;
+}
+
+.role-select-card.active .role-icon {
+  transform: scale(1.15);
+}
+
+.role-name {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* ==========================================================================
+   INPUT FIELDS (CRISP LIGHT SMOKE & LIGHT BLUE FOCUS)
+   ========================================================================== */
+.auth-form-group {
+  margin-bottom: 20px;
+}
+
+.auth-form-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.auth-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.auth-input-icon {
+  position: absolute;
+  left: 16px;
+  font-size: 17px;
+  color: #94a3b8;
+  pointer-events: none;
+  transition: color 0.2s ease;
+}
+
+.auth-input-field {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 46px 13px 44px;
+  background: #f8fafc;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 12px;
+  color: #0f172a;
+  font-family: inherit;
+  font-size: 14.5px;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.auth-input-field::placeholder {
+  color: #94a3b8;
+  font-size: 13.5px;
+}
+
+.auth-input-field:focus {
+  background: #ffffff;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.18), 0 2px 8px rgba(56, 189, 248, 0.1);
+}
+
+.auth-input-field:focus + .auth-input-icon,
+.auth-input-wrapper:focus-within .auth-input-icon {
+  color: #0284c7;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 14px;
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px;
+  transition: color 0.2s ease;
+}
+
+.password-toggle-btn:hover {
+  color: #0284c7;
+}
+
+/* Form Helper Row */
+.auth-options-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  font-size: 12.5px;
+  color: #64748b;
+}
+
+.remember-checkbox-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.remember-checkbox-wrap input {
+  accent-color: #0284c7;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   BUTTON (LIGHT BLUE GRADIENT WITH SMOKE GLOW)
+   ========================================================================== */
+.auth-submit-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+  background-size: 200% auto;
+  color: #ffffff;
+  border: none;
+  border-radius: 14px;
+  font-family: inherit;
+  font-size: 14.5px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.28);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-submit-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: 0.5s;
+}
+
+.auth-submit-btn:hover {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(2, 132, 199, 0.4);
+}
+
+.auth-submit-btn:hover::before {
+  left: 100%;
+}
+
+.auth-submit-btn:active {
+  transform: translateY(0);
+}
+
+.auth-submit-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Error Banner */
+.auth-error-banner {
+  padding: 12px 16px;
+  background: #fee2e2;
+  border: 1.5px solid #fca5a5;
+  border-radius: 12px;
+  color: #b91c1c;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Auth Card Footer */
+.auth-card-footer {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 13.5px;
+  color: #64748b;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.auth-card-footer a {
+  color: #0284c7;
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 6px;
+  transition: color 0.2s ease;
+}
+
+.auth-card-footer a:hover {
+  color: #0369a1;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   RESPONSIVE LAYOUT
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .login-page {
+    padding-top: 76px;
+  }
+  .back-to-home-link {
+    top: 16px;
+    left: 16px;
+    padding: 7px 14px 7px 8px;
+    font-size: 12px;
+  }
+  .login-shell {
+    grid-template-columns: 1fr;
+    max-width: 580px;
+  }
+  .login-hero-panel {
+    display: none;
+  }
+  .login-auth-card {
+    padding: 34px 28px;
+  }
+}
+
+@media (max-width: 520px) {
+  .login-page {
+    padding: 68px 16px 20px;
+  }
+  .back-to-home-link {
+    top: 14px;
+    left: 14px;
+    padding: 6px 12px 6px 7px;
+    font-size: 11.5px;
+    gap: 7px;
+  }
+  .back-to-home-link .back-arrow-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 13px;
+  }
+  .login-auth-card {
+    padding: 26px 18px;
+    border-radius: 20px;
+  }
+  .role-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

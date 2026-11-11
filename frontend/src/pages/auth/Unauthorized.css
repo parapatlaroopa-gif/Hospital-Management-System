@@ -1,0 +1,333 @@
+/* ==========================================================================
+   CAREPULSE AI HOSPITAL - UNAUTHORIZED / ROLE RESTRICTED
+   Light Smoke & Light Blue Mixed Colors Theme • Frosted Glass • Animated
+   ========================================================================== */
+
+.unauth-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 20px;
+  box-sizing: border-box;
+  background: #f1f5f9;
+  background-image: 
+    radial-gradient(at 0% 0%, #e0f2fe 0px, transparent 55%),
+    radial-gradient(at 100% 0%, #bae6fd 0px, transparent 50%),
+    radial-gradient(at 50% 100%, #e2e8f0 0px, transparent 60%),
+    linear-gradient(180deg, #f8fafc 0%, #edf2f7 50%, #e2e8f0 100%);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1e293b;
+}
+
+/* Subtle Animated Light Smoke Grid */
+.unauth-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(2, 132, 199, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(2, 132, 199, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  animation: unauthGridDrift 24s linear infinite;
+}
+
+@keyframes unauthGridDrift {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(40px); }
+}
+
+/* Ambient Radial Light Blue Glow Orb */
+.unauth-ambient-orb {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(186, 230, 253, 0.45) 0%, rgba(224, 242, 254, 0.2) 50%, transparent 70%);
+  filter: blur(55px);
+  pointer-events: none;
+  animation: unauthOrbFloat 14s ease-in-out infinite alternate;
+}
+
+@keyframes unauthOrbFloat {
+  0% { transform: translate(-70px, -50px) scale(0.95); }
+  100% { transform: translate(80px, 60px) scale(1.08); }
+}
+
+/* Main Card */
+.unauth-card {
+  position: relative;
+  z-index: 10;
+  max-width: 520px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 40px 36px;
+  box-shadow: 
+    0 25px 50px -12px rgba(2, 132, 199, 0.16),
+    0 10px 20px -8px rgba(15, 23, 42, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(224, 242, 254, 0.95);
+  text-align: center;
+  box-sizing: border-box;
+  animation: cardFadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes cardFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Security Badge Icon */
+.unauth-badge-icon-wrapper {
+  position: relative;
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.unauth-badge-icon-pulse {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: rgba(2, 132, 199, 0.12);
+  animation: iconPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.15); opacity: 0.2; }
+}
+
+.unauth-badge-icon {
+  position: relative;
+  z-index: 2;
+  width: 72px;
+  height: 72px;
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+  color: #0284c7;
+  border: 2px solid #7dd3fc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  box-shadow: 0 8px 24px -4px rgba(2, 132, 199, 0.28);
+}
+
+/* Security Compliance Tag */
+.unauth-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #0369a1;
+  margin-bottom: 12px;
+}
+
+.unauth-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 10px;
+  letter-spacing: -0.4px;
+}
+
+.unauth-description {
+  color: #475569;
+  font-size: 14.5px;
+  line-height: 1.6;
+  margin: 0 0 24px;
+}
+
+.unauth-role-pill {
+  display: inline-block;
+  padding: 2px 10px;
+  background: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+}
+
+/* Primary Action Button (Return to Dashboard) */
+.unauth-primary-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 20px -4px rgba(2, 132, 199, 0.38);
+  margin-bottom: 22px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.unauth-primary-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px -4px rgba(2, 132, 199, 0.48);
+  filter: brightness(1.05);
+}
+
+.unauth-primary-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.unauth-primary-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* 1-Click Role Switcher Container */
+.unauth-switcher-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.unauth-switcher-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.unauth-switcher-title {
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #0284c7;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.unauth-switcher-note {
+  font-size: 11px;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.unauth-switcher-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.unauth-role-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 14px;
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.unauth-role-btn:hover:not(:disabled) {
+  background: #f0f9ff;
+  border-color: #7dd3fc;
+  color: #0369a1;
+  transform: translateY(-1px);
+}
+
+.unauth-role-btn.active {
+  background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+  border-color: #0284c7;
+  color: #0369a1;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.14);
+}
+
+.unauth-role-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.unauth-role-btn-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.unauth-role-icon {
+  font-size: 16px;
+}
+
+.unauth-active-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #0284c7;
+  box-shadow: 0 0 0 2px rgba(2, 132, 199, 0.2);
+}
+
+/* Sign Out / Universal Login Button */
+.unauth-signout-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 16px;
+  background: #ffffff;
+  color: #64748b;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.unauth-signout-btn:hover {
+  background: #fef2f2;
+  color: #ef4444;
+  border-color: #fca5a5;
+}
+

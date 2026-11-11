@@ -1,0 +1,973 @@
+/* ==========================================================================
+   CAREPULSE AI HEALTHCARE - LIGHT SMOKE & LIGHT BLUE MIXED THEME (PUBLIC)
+   Airy Frosted White & Light Smoke Glass • Crystal Light Blue Accents • Animated
+   ========================================================================== */
+
+.public-page {
+  min-height: 100vh;
+  width: 100%;
+  background: #f1f5f9;
+  background-image: 
+    radial-gradient(at 0% 0%, #e0f2fe 0px, transparent 55%),
+    radial-gradient(at 100% 0%, #bae6fd 0px, transparent 50%),
+    radial-gradient(at 50% 100%, #e2e8f0 0px, transparent 60%),
+    linear-gradient(180deg, #f8fafc 0%, #edf2f7 50%, #e2e8f0 100%);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1e293b;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Subtle Animated Light Smoke Grid */
+.public-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(2, 132, 199, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(2, 132, 199, 0.035) 1px, transparent 1px);
+  background-size: 44px 44px;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   EMERGENCY RED ALERT TICKER
+   ========================================================================== */
+.emergency-top-bar {
+  background: linear-gradient(90deg, #b91c1c 0%, #dc2626 50%, #991b1b 100%);
+  color: #ffffff;
+  padding: 9px 40px;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1001;
+  box-shadow: 0 2px 10px rgba(220, 38, 38, 0.25);
+}
+
+.emergency-top-bar strong {
+  color: #fef08a;
+  font-weight: 800;
+}
+
+.emergency-top-bar a {
+  color: #ffffff;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.22);
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.emergency-top-bar a:hover {
+  background: #ffffff;
+  color: #dc2626;
+}
+
+/* ==========================================================================
+   FROSTED GLASS STICKY NAVIGATION (LIGHT SMOKE & LIGHT BLUE)
+   ========================================================================== */
+.public-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 48px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1.5px solid rgba(186, 230, 253, 0.8);
+  box-shadow: 0 4px 20px rgba(148, 163, 184, 0.08);
+  transition: all 0.3s ease;
+}
+
+.public-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+.public-logo-icon {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #e0f2fe 0%, #38bdf8 100%);
+  color: #ffffff;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 4px 14px rgba(56, 189, 248, 0.3);
+}
+
+.public-brand-title {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+  display: block;
+}
+
+.public-brand-subtitle {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #0284c7;
+  display: block;
+}
+
+.public-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.public-nav-link {
+  color: #475569;
+  text-decoration: none;
+  font-size: 14.5px;
+  font-weight: 600;
+  position: relative;
+  padding: 6px 2px;
+  transition: color 0.2s ease;
+}
+
+.public-nav-link:hover,
+.public-nav-link.active {
+  color: #0284c7;
+}
+
+.public-nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2.5px;
+  background: linear-gradient(90deg, #38bdf8, #0284c7);
+  border-radius: 2px;
+}
+
+.public-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nav-btn-signin {
+  padding: 10px 22px;
+  background: #f1f5f9;
+  border: 1.5px solid #cbd5e1;
+  color: #0f172a;
+  border-radius: 12px;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.nav-btn-signin:hover {
+  background: #e0f2fe;
+  border-color: #7dd3fc;
+  color: #0284c7;
+}
+
+.nav-btn-register {
+  padding: 10px 24px;
+  background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.25);
+  transition: all 0.25s ease;
+}
+
+.nav-btn-register:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(2, 132, 199, 0.35);
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   HERO BANNER (LIGHT SMOKE & LIGHT BLUE)
+   ========================================================================== */
+.public-hero {
+  position: relative;
+  padding: 80px 48px 80px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 18px;
+  background: #e0f2fe;
+  border: 1px solid #7dd3fc;
+  border-radius: 9999px;
+  color: #0369a1;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 24px;
+  animation: fadeSlideUp 0.6s ease;
+}
+
+.hero-title {
+  font-size: 56px;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+  color: #0f172a;
+  max-width: 960px;
+  margin: 0 auto 24px;
+  animation: fadeSlideUp 0.7s ease;
+}
+
+.hero-title-highlight {
+  background: linear-gradient(135deg, #0284c7 0%, #38bdf8 60%, #0369a1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #475569;
+  max-width: 740px;
+  margin: 0 auto 40px;
+  animation: fadeSlideUp 0.8s ease;
+}
+
+/* CARDIOGRAM MONITOR STRIP (LIGHT SMOKE & LIGHT BLUE) */
+.hero-ecg-strip {
+  max-width: 820px;
+  margin: 0 auto 40px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1.5px solid rgba(186, 230, 253, 0.9);
+  border-radius: 18px;
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 8px 24px rgba(148, 163, 184, 0.12);
+}
+
+.ecg-strip-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #0284c7;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.ecg-strip-svg {
+  flex: 1;
+  height: 38px;
+  overflow: visible;
+}
+
+.ecg-path {
+  fill: none;
+  stroke: #0284c7;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: ecgSweep 2.5s linear infinite;
+  filter: drop-shadow(0 1px 4px rgba(2, 132, 199, 0.4));
+}
+
+@keyframes ecgSweep {
+  0% { stroke-dashoffset: 400; }
+  50% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -400; }
+}
+
+/* ==========================================================================
+   ROLE PORTAL SELECTOR HUB (LIGHT SMOKE & LIGHT BLUE CARDS)
+   ========================================================================== */
+.portal-launcher-section {
+  max-width: 1240px;
+  margin: 0 auto 80px;
+  padding: 0 32px;
+}
+
+.launcher-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.launcher-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 8px;
+}
+
+.launcher-title span {
+  color: #0284c7;
+}
+
+.launcher-subtitle {
+  font-size: 14.5px;
+  color: #64748b;
+  margin: 0;
+}
+
+.portal-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.portal-hub-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(186, 230, 253, 0.8);
+  border-radius: 22px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 8px 24px rgba(148, 163, 184, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.portal-hub-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #bae6fd, #38bdf8, #0284c7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portal-hub-card:hover {
+  transform: translateY(-8px);
+  border-color: #38bdf8;
+  background: #ffffff;
+  box-shadow: 0 16px 36px rgba(56, 189, 248, 0.22), 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.portal-hub-card:hover::before {
+  opacity: 1;
+}
+
+.portal-card-icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: #e0f2fe;
+  border: 1px solid #bae6fd;
+  color: #0284c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portal-hub-card:hover .portal-card-icon-wrap {
+  transform: scale(1.12) rotate(4deg);
+  box-shadow: 0 4px 14px rgba(56, 189, 248, 0.3);
+}
+
+.portal-card-badge {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0284c7;
+  margin-bottom: 8px;
+}
+
+.portal-card-title {
+  font-size: 19px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 10px;
+}
+
+.portal-card-desc {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0 0 22px;
+  flex: 1;
+}
+
+.portal-card-action {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0284c7;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: gap 0.2s ease;
+}
+
+.portal-hub-card:hover .portal-card-action {
+  gap: 12px;
+  color: #0369a1;
+}
+
+/* ==========================================================================
+   LIVE HOSPITAL TELEMETRY RIBBON (LIGHT SMOKE & LIGHT BLUE)
+   ========================================================================== */
+.telemetry-ribbon-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1240px;
+  margin: 0 auto 90px;
+  padding: 0 32px;
+}
+
+.telemetry-cell {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1.5px solid rgba(186, 230, 253, 0.8);
+  border-radius: 18px;
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(148, 163, 184, 0.08);
+  transition: transform 0.25s ease;
+}
+
+.telemetry-cell:hover {
+  transform: translateY(-4px);
+  border-color: #38bdf8;
+  box-shadow: 0 10px 24px rgba(56, 189, 248, 0.16);
+}
+
+.telemetry-val {
+  font-size: 34px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.telemetry-val span {
+  color: #0284c7;
+}
+
+.telemetry-lbl {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ==========================================================================
+   CLINICAL SPECIALTIES GRID (FROSTED WHITE & LIGHT SMOKE)
+   ========================================================================== */
+.public-section {
+  padding: 90px 48px;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 56px;
+}
+
+.section-badge {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #0284c7;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #0f172a;
+  margin: 0 0 14px;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: #64748b;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(14px);
+  border: 1.5px solid rgba(186, 230, 253, 0.7);
+  border-radius: 20px;
+  padding: 32px 26px;
+  box-shadow: 0 6px 18px rgba(148, 163, 184, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: #38bdf8;
+  box-shadow: 0 14px 32px rgba(56, 189, 248, 0.18);
+}
+
+.service-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: #e0f2fe;
+  color: #0284c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon-wrap {
+  transform: scale(1.1) rotate(6deg);
+}
+
+.service-title {
+  font-size: 18.5px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 10px;
+}
+
+.service-text {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #64748b;
+  margin: 0;
+}
+
+/* ==========================================================================
+   CONTACT SECTION
+   ========================================================================== */
+.contact-section-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.contact-info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-card-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1.5px solid rgba(186, 230, 253, 0.7);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 4px 14px rgba(148, 163, 184, 0.08);
+}
+
+.contact-card-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 12px;
+  background: #e0f2fe;
+  color: #0284c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.contact-card-text h4 {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.contact-card-text p {
+  margin: 0;
+  font-size: 13.5px;
+  color: #64748b;
+}
+
+.contact-form-card {
+  background: rgba(255, 255, 255, 0.98);
+  border: 1.5px solid rgba(186, 230, 253, 0.85);
+  border-radius: 22px;
+  padding: 36px;
+  box-shadow: 0 15px 35px rgba(148, 163, 184, 0.12);
+}
+
+.contact-form-card h3 {
+  margin: 0 0 6px;
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.contact-form-card p {
+  margin: 0 0 24px;
+  font-size: 13.5px;
+  color: #64748b;
+}
+
+.contact-form-card .form-group {
+  margin-bottom: 18px;
+}
+
+.contact-form-card label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 6px;
+}
+
+.contact-form-card input,
+.contact-form-card textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  color: #0f172a;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.contact-form-card input:focus,
+.contact-form-card textarea:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.18);
+  background: #ffffff;
+}
+
+.contact-submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 14.5px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.28);
+  transition: all 0.25s ease;
+}
+
+.contact-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(2, 132, 199, 0.38);
+}
+
+/* ==========================================================================
+   FOOTER (SMOKE SLATE WITH LIGHT BLUE ACCENTS)
+   ========================================================================== */
+.public-footer {
+  background: #0f172a;
+  color: #94a3b8;
+  padding: 70px 48px 30px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.footer-top-grid {
+  max-width: 1240px;
+  margin: 0 auto 50px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+}
+
+.footer-brand-col h4 {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0 0 12px;
+}
+
+.footer-brand-col p {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: #94a3b8;
+  max-width: 340px;
+}
+
+.footer-col h5 {
+  color: #ffffff;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 18px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-col a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 13.5px;
+  transition: color 0.2s ease;
+}
+
+.footer-col a:hover {
+  color: #38bdf8;
+}
+
+.footer-bottom {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12.5px;
+  color: #64748b;
+}
+
+/* ==========================================================================
+   MOBILE NAVIGATION DRAWER & RESPONSIVE LAYOUT
+   ========================================================================== */
+.public-mobile-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #f0f9ff;
+  border: 1.5px solid #bae6fd;
+  color: #0284c7;
+  font-size: 22px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.public-mobile-toggle:hover {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.public-mobile-menu {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 40px;
+  }
+  .portal-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .telemetry-ribbon-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .contact-section-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .emergency-top-bar {
+    padding: 8px 16px;
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .public-navbar {
+    padding: 12px 16px;
+  }
+
+  .public-nav-links,
+  .public-nav-actions {
+    display: none !important;
+  }
+
+  .public-mobile-toggle {
+    display: flex !important;
+  }
+
+  /* Mobile Dropdown Menu */
+  .public-mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px 18px;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 2px solid #bae6fd;
+    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.12);
+    position: sticky;
+    top: 64px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    animation: fadeIn 0.25s ease-out;
+  }
+
+  .public-mobile-menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .public-mobile-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #334155;
+    font-weight: 700;
+    font-size: 14.5px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+  }
+
+  .public-mobile-nav-link:hover,
+  .public-mobile-nav-link.active {
+    background: #e0f2fe;
+    color: #0369a1;
+    border-color: #7dd3fc;
+  }
+
+  .public-mobile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 14px;
+    border-top: 1.5px solid #e2e8f0;
+  }
+
+  .public-hero {
+    padding: 36px 16px 30px !important;
+  }
+
+  .hero-title {
+    font-size: 28px !important;
+    line-height: 1.25 !important;
+  }
+
+  .hero-subtitle {
+    font-size: 14px !important;
+  }
+
+  .hero-cta-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta-buttons > * {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .public-section {
+    padding: 30px 16px !important;
+  }
+
+  .section-title {
+    font-size: 24px !important;
+  }
+
+  .portal-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .telemetry-ribbon-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
+

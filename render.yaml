@@ -1,0 +1,21 @@
+services:
+  # Backend Web Service
+  - type: web
+    name: hospital-backend
+    env: python
+    buildCommand: "cd backend && chmod +x build.sh && ./build.sh"
+    startCommand: "cd backend && gunicorn config.wsgi:application"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+
+  # Frontend Static Site
+  - type: web
+    name: hospital-frontend
+    env: static
+    buildCommand: "cd frontend && npm install && npm run build"
+    staticPublishPath: "./frontend/dist"
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

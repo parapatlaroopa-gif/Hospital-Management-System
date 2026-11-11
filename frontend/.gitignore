@@ -1,0 +1,34 @@
+Django==6.0.8
+djangorestframework
+django-cors-headers
+mysqlclient
+gunicorn
+whitenoise
+dj-database-url
+psycopg2-binary
+python-dotenv
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Backend
+backend/__pycache__/
+backend/**/__pycache__/
+backend/.venv/
+backend/venv/
+
+# Python
+*.pyc
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Database
+*.sqlite3
+
+# IDE
+.vscode/
+.idea/
