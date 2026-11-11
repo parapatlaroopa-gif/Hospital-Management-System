@@ -82,12 +82,18 @@ const handleSubmit = async (e) => {
   setMessage("");
 
   try {
-    const payload = {
-      ...formData,
-      category: formData.category.trim(),
-      quantity: Number(formData.quantity),
-      price: Number(formData.price).toFixed(2),
-    };
+    
+const category = String(formData.category || "").trim();
+
+const payload = {
+  ...formData,
+  category:
+    category.charAt(0).toUpperCase() +
+    category.slice(1).toLowerCase(),
+  quantity: Number(formData.quantity),
+  price: Number(formData.price).toFixed(2),
+};
+ 
 
     if (editingId) {
       await API.put(
