@@ -7,7 +7,7 @@ export const LOCAL_API_URL =
 
 export const RENDER_API_URL =
   import.meta.env.VITE_RENDER_API_URL ||
-  "https://hospital-management-587l.onrender.com/api/";
+  " https://hospital-backend-gqpy.onrender.com/api/";
 
 export const getActiveApiUrl = () => {
   const envUrl = import.meta.env.VITE_API_URL;
