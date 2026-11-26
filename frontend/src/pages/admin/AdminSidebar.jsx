@@ -79,7 +79,7 @@ export default function AdminSidebar() {
         <div className="sidebar-logo">
           <div className="hospital-icon">🏥</div>
           <div>
-            <h2>AI Smart Hospital</h2>
+            <h2>CarePlus-Smart Hospital</h2>
             <p>Admin Portal</p>
           </div>
           <button
