@@ -54,7 +54,7 @@ export default function AdminSidebar() {
           </button>
           <div className="mobile-topbar-brand">
             <span className="mobile-brand-icon">🏥</span>
-            <span className="mobile-brand-name">AI Hospital Admin</span>
+            <span className="mobile-brand-name">AI Smart-Hospital Admin</span>
           </div>
         </div>
 
